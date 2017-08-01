@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+  <title>Krishna |Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--font aswome-->
+  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/animate.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+</head>
+<body>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top" ng-controller="homeController">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand page-scroll wow fadeInLeft" id="ss"  href="#!/home">{{appDetails.title}} <i class="fa fa-bolt fa-1x" aria-hidden="true"></i></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right" id="ass" >
+        <li >
+          <a class=" wow fadeInDown" href="#!/books">Books</a>  <!--ng-class="{active: nav.isActive('/books')}-->
+        </li>
+        <li >
+          <a class=" wow fadeInDown"  href="#!/kart">kart</a>  <!--ng-class="{active: nav.isActive('/kart')}"-->
+        </li>
+        <li>
+          <a class=" wow fadeInDown" href="#!/angular">Angular</a>
+        </li>
+        <li>
+          <a class=" wow fadeInDown" href="#!/home">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+<div class="hacker">
+  <div id="bookListWrapper">
+    <form role="form">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search here (books).." ng-model="searchStr" style="float:left;">
+        <input type="text" class="form-control" placeholder="Search here(price).." ng-model="searchPre">
+      </div>
+    </form>
+  </div>
+  <ul class="list-unstyled">
+    <li class="book wow zoomIn" data-wow-delay="0.5s" ng-repeat="book in BookList | filter: {name:searchStr, price:searchPre}">
+      <div class="book-details clearfix black">
+        <h3><i class="fa fa-book" aria-hidden="true"></i>Book Name: {{book.name}}</h3>
+        <p><i class="fa fa-money" aria-hidden="true"></i>&nbsp;Price:{{book.price | currency:' $. '}}</p>
+        <ul class="list-unstyled list-inline">
+          <li><i class="fa fa-star-half-o" aria-hidden="true"></i>&nbsp;Rating: {{book.Rating}}</li><br/>
+          <li>Binding: {{book.binding | uppercase}}</li><br/>
+          <li><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Relese date:{{book.Relese}}</li>
+        </ul>
+        <button class="btn btn-info pull-right" ng-click="addToKart(book)">Add to kart</button>
+      </div>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

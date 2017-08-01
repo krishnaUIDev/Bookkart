@@ -1,0 +1,124 @@
+
+<!--Author: KrishnaKanth
+Author URL: http://krishnakondoju.blogspot.com
+License: Creative Commons Attribution 3.0 Unported
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Krishna |Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--font aswome-->
+  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/animate.css"/>
+  <link rel="stylesheet" href="../CSS/login.css"/>
+  <link rel="stylesheet" href="../CSS/font-awesome.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <style>
+    html, body{
+      font-size: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background:url(./images/bg2.jpeg) no-repeat 0px 0px;
+      background-size:cover;
+      background-attachment:fixed;
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      -o-background-size:cover;
+
+    }
+
+    #submit{
+      background:#33b5e5 ;
+      border-color: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #submit:hover {
+      background:#28d;
+    }
+
+    /* Buttons' focus effect */
+    #submit:focus {
+      border-color: #05a;
+    }
+    #submit {
+      width: 100%;
+      background-color:#ef4d4d;
+      color: white;
+      padding: 12px 20px;
+
+      border: none;
+      font-size:14px;
+      letter-spacing:1px;
+      cursor: pointer;
+      outline:none;
+      transition: .5s ease-in;
+      -webkit-transition: .5s ease-in;
+      -ms-transition: .5s ease-in;
+      -o-transition: .5s ease-in;
+      -moz-transition:.5s ease-in;
+    }
+
+    #submit:hover {
+      background-color:rgba(51, 181, 229, 0.62);
+    }
+  </style>
+</head>
+<body>
+<!--navbar started-->
+
+
+<div class="login-form w3_form" ng-controller="logincontroller">
+  <!--  Title-->
+  <div class="login-title w3_title">
+    <h1>Bookart SignUp Form</h1>
+  </div>
+  <div class="login w3_login">
+    <h2 class="login-header w3_header">SignUp</h2>
+    <div class="w3l_grid">
+      <form class="login-container">
+        <input type="Email" placeholder="admin@gmail.com" Name="Email" ng-model="use.email" required>
+        <input type="password" placeholder="password" Name="password" ng-model="use.Password" required>
+        <input type="password" placeholder="password" Name="password" ng-model="use.Pass" required>
+        <p id="memama"></p>
+        <button type="submit" value="clear" id="submit" ng-click="clearUse()">Clear</button>&nbsp;
+        <button type="submit" value="Submit" id="submit" ng-click="signupUser()">Submit</button>
+      </form>
+      <div class="second-section w3_section">
+        <div class="bottom-header w3_bottom">
+          <h3>OR</h3>
+        </div>
+        <div class="social-links w3_social">
+          <ul>
+            <!-- facebook -->
+            <li> <a class="facebook" href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
+
+            <!-- twitter -->
+            <li> <a class="twitter" href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+
+            <!-- google plus -->
+            <li> <a class="googleplus" href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom-text w3_bottom_text">
+        <p>Do you have account?<a href="#!/home">Signin</a></p>
+        <h4> <a href="#!/reset">Forgot your password?</a></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-w3l">
+  <p class="agile"> &copy; 2017 Bookart Site . All Rights Reserved | Design by <a href="#">Krishna</a></p>
+</div>
+</body>
+</html>

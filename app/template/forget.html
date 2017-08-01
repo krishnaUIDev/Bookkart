@@ -1,0 +1,33 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Reset Password</title>
+  <link href="../styles/forget.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- Custom Theme files -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--element start here-->
+  <div class="elelment" ng-controller="logincontroller">
+      <h2>Reset Password</h2>
+        <div class="element-main">
+          <h1>Forgot Password</h1>
+          <p> Enter your email address. You will receive an email with a link to reset you password</p>
+          <form>
+            <input type="text" value="Your e-mail address" ng-model="ufor.piss" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your e-mail address';}">
+            <button type="submit" class="karth" ng-click="forget()">Reset my password</button>
+            <p id="mmama"></p>
+
+          </form>
+        </div>
+  </div>
+  <div class="copy-right">
+    <p>© 2017 Bookart. All rights reserved | by  <a href="http://krishnakondoju.blogspot.com/" target="_blank">  Krishna </a></p>
+  </div>
+<!--element end here-->
+</body>
+</html>
